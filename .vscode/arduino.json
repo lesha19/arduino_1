@@ -1,5 +1,0 @@
-{
-    "board": "arduino:avr:uno",
-    "port": "/dev/tty.usbmodem14201",
-    "sketch": "lesson_02_home_button_control/lesson_02_home_button_control.ino"
-}
