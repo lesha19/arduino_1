@@ -1,25 +1,35 @@
 void setup() {
+
   Serial.begin(9600);
-  pinMode(10, OUTPUT);
-  pinMode(2, INPUT);
+
+  pinMode(7, OUTPUT);
+  digitalWrite(7, LOW);
+  
   pinMode(3, INPUT);
+  digitalWrite(3, HIGH);
 
-
+  pinMode(4, INPUT);
+  digitalWrite(4, HIGH);
+  
 }
 
 void loop() {
-
-  Serial.println(digitalRead(2));
-  delay(500);
-
-  if (digitalRead(5) == 1) {
-
-    digitalWrite(10, HIGH);
-    delay(500);
-  };
-
-
-
-
+  int pinState4 = digitalRead(4);
+  int pinState3 = digitalRead(3);
+  Serial.println(pinState3);
+  
+  if (pinState3 == 0)
+  {
+    digitalWrite(7, HIGH);
+  }
+  delay(50);
+  
+  if (pinState4 == 0)
+  {
+    digitalWrite(7, LOW);
+  }
+  
+  
+  
 
 }
